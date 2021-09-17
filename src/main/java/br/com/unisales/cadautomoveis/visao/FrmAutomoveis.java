@@ -133,7 +133,7 @@ public class FrmAutomoveis extends javax.swing.JDialog {
   setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
   setTitle("Automóveis");
 
-  jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+  jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 255, 255), null));
 
   jLabel1.setText("Placa");
 
@@ -147,8 +147,6 @@ public class FrmAutomoveis extends javax.swing.JDialog {
    ex.printStackTrace();
   }
 
-  jButton1.setBackground(new java.awt.Color(0, 102, 255));
-  jButton1.setForeground(new java.awt.Color(255, 255, 255));
   jButton1.setText("Salvar");
   jButton1.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +154,6 @@ public class FrmAutomoveis extends javax.swing.JDialog {
    }
   });
 
-  jButton2.setBackground(new java.awt.Color(255, 204, 0));
   jButton2.setText("Cancelar");
   jButton2.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,8 +161,6 @@ public class FrmAutomoveis extends javax.swing.JDialog {
    }
   });
 
-  jButton3.setBackground(new java.awt.Color(255, 51, 51));
-  jButton3.setForeground(new java.awt.Color(255, 255, 255));
   jButton3.setText("Excluir");
   jButton3.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,7 +226,7 @@ public class FrmAutomoveis extends javax.swing.JDialog {
     .addComponent(jButton2)
     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
     .addComponent(jButton3)
-    .addContainerGap(170, Short.MAX_VALUE))
+    .addContainerGap(166, Short.MAX_VALUE))
   );
 
   tabelaAutomoveis.setModel(new javax.swing.table.DefaultTableModel(
@@ -267,7 +262,7 @@ public class FrmAutomoveis extends javax.swing.JDialog {
    tabelaAutomoveis.getColumnModel().getColumn(0).setMaxWidth(0);
   }
 
-  jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+  jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
   jLabel4.setText("Digite placa ou modelo para pesquisar");
 
@@ -316,9 +311,6 @@ public class FrmAutomoveis extends javax.swing.JDialog {
    .addGroup(jPanel2Layout.createSequentialGroup()
     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-      .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addComponent(edtPesquisa, javax.swing.GroupLayout.Alignment.LEADING))
      .addGroup(jPanel2Layout.createSequentialGroup()
       .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
        .addComponent(jLabel5)
@@ -331,8 +323,10 @@ public class FrmAutomoveis extends javax.swing.JDialog {
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(jButton5)))))
-    .addContainerGap(75, Short.MAX_VALUE))
+        .addComponent(jButton5))))
+     .addComponent(edtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
+    .addContainerGap(67, Short.MAX_VALUE))
   );
   jPanel2Layout.setVerticalGroup(
    jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,17 +338,17 @@ public class FrmAutomoveis extends javax.swing.JDialog {
     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
      .addGroup(jPanel2Layout.createSequentialGroup()
-      .addComponent(jLabel5)
-      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-      .addComponent(cbOrdem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-     .addGroup(jPanel2Layout.createSequentialGroup()
-      .addComponent(jLabel6)
+      .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+       .addComponent(jLabel5)
+       .addComponent(jLabel6))
       .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
       .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-       .addComponent(cbOrdemTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-       .addComponent(jButton4)
-       .addComponent(jButton5))))
-    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+       .addComponent(cbOrdem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+       .addComponent(cbOrdemTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+      .addComponent(jButton4)
+      .addComponent(jButton5)))
+    .addContainerGap(42, Short.MAX_VALUE))
   );
 
   javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

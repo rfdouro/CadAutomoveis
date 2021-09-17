@@ -108,7 +108,7 @@ public class FrmPessoas extends javax.swing.JDialog {
    }
   });
 
-  jPanel1.setBackground(new java.awt.Color(0, 255, 204));
+  jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 255, 255), null));
 
   jLabel1.setText("Nome:");
 
@@ -120,8 +120,6 @@ public class FrmPessoas extends javax.swing.JDialog {
    ex.printStackTrace();
   }
 
-  jButton1.setBackground(new java.awt.Color(51, 51, 255));
-  jButton1.setForeground(new java.awt.Color(255, 255, 255));
   jButton1.setText("Salvar");
   jButton1.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +127,6 @@ public class FrmPessoas extends javax.swing.JDialog {
    }
   });
 
-  jButton4.setBackground(new java.awt.Color(255, 204, 0));
   jButton4.setText("Cancela");
   jButton4.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,8 +134,6 @@ public class FrmPessoas extends javax.swing.JDialog {
    }
   });
 
-  jButton5.setBackground(new java.awt.Color(255, 51, 51));
-  jButton5.setForeground(new java.awt.Color(255, 255, 255));
   jButton5.setText("Excluir");
   jButton5.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,7 +213,7 @@ public class FrmPessoas extends javax.swing.JDialog {
    tabelaPessoas.getColumnModel().getColumn(0).setMaxWidth(0);
   }
 
-  jPanel2.setBackground(new java.awt.Color(255, 153, 255));
+  jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 255, 255), null));
 
   edtNomeProcura.addKeyListener(new java.awt.event.KeyAdapter() {
    public void keyReleased(java.awt.event.KeyEvent evt) {

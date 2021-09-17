@@ -5,6 +5,12 @@
  */
 package br.com.unisales.cadautomoveis.visao;
 
+import br.com.unisales.cadautomoveis.persistencia.BancoDados;
+import com.github.weisj.darklaf.LafManager;
+import com.github.weisj.darklaf.theme.DarculaTheme;
+import mdlaf.MaterialLookAndFeel;
+import mdlaf.themes.MaterialOceanicTheme;
+
 /**
  *
  * @author romulo
@@ -15,6 +21,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
   * Creates new form FrmPrincipal
   */
  public FrmPrincipal() {
+  //BancoDados.init();
   initComponents();
  }
 
@@ -34,8 +41,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
   setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
   setTitle("Cadastro");
 
-  jButton1.setBackground(new java.awt.Color(255, 102, 0));
-  jButton1.setForeground(new java.awt.Color(255, 255, 255));
   jButton1.setText("Pessoas");
   jButton1.addActionListener(new java.awt.event.ActionListener() {
    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,7 +48,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
    }
   });
 
-  jButton2.setBackground(new java.awt.Color(0, 255, 102));
   jButton2.setText("Automóveis");
   jButton2.setPreferredSize(new java.awt.Dimension(79, 25));
   jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -86,11 +90,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
  }// </editor-fold>//GEN-END:initComponents
 
  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-  new FrmPessoas(this, true).setVisible(true); 
+  new FrmPessoas(this, true).setVisible(true);
  }//GEN-LAST:event_jButton1ActionPerformed
 
  private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  new FrmAutomoveis(this, true).setVisible(true); 
+  new FrmAutomoveis(this, true).setVisible(true);
  }//GEN-LAST:event_jButton2ActionPerformed
 
  /**
@@ -102,20 +106,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
   /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
    */
+  //https://github.com/weisJ/darklaf
+  //https://github.com/vincenzopalazzo/material-ui-swing/
+
+  MaterialOceanicTheme materialOceanicTheme = new MaterialOceanicTheme();
+  MaterialLookAndFeel andFeel = new MaterialLookAndFeel(materialOceanicTheme);
+
   try {
-   for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-    if ("Nimbus".equals(info.getName())) {
-     javax.swing.UIManager.setLookAndFeel(info.getClassName());
-     break;
-    }
-   }
-  } catch (ClassNotFoundException ex) {
-   java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-  } catch (InstantiationException ex) {
-   java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-  } catch (IllegalAccessException ex) {
-   java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-  } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+   //javax.swing.UIManager.setLookAndFeel(andFeel);
+   //LafManager.install();
+   LafManager.install(new DarculaTheme());
+  } catch (Exception ex) {
    java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
   }
   //</editor-fold>
